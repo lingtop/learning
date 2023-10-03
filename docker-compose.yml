@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:12-alpine
+    container_name: template-pg
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=mvp_onboard
+    restart: always
+  redis:
+    image: 'bitnami/redis:latest'
+    container_name: template-redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - './redis_data:/bitnami'
+    ports:
+      - 6379:6379

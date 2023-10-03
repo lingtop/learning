@@ -1,0 +1,32 @@
+Log:
+  Level: debug
+  Color: true
+  Json: false
+
+Interface:
+  Http:
+    Port: 3000
+
+Database:
+  Username: postgres
+  Password: postgres
+  Host: 127.0.0.1
+  Port: 5432
+  DatabaseName: mvp_onboard
+  DatabaseSchema: public
+  ConnectionTimeout: 30
+  MaxConnection: 1000
+  MinConnection: 20
+  LogLevel: debug
+
+System:
+  TimeZone: Asia/Bangkok
+
+Redis:
+  Host: 127.0.0.1
+  Port: 6379
+  MaxConnection: 1000
+  Password:
+
+Key:
+  EncryptedKey: 3b6942982f9493a89225e129c9bd03ed68e902e97e30994135548780a7813d5f
